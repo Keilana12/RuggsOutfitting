@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import os
-from flask import Flask, render_template_string
+from flask import Flask, render_template_string, send_from_directory
 
 app = Flask(__name__, static_folder='.')
 
@@ -53,6 +53,19 @@ def ranch():
 @app.route('/contact')
 def contact():
     return render_page('contact.html')
+
+# Static file routes
+@app.route('/assets/<path:filename>')
+def assets(filename):
+    return send_from_directory('assets', filename)
+
+@app.route('/images/<path:filename>')
+def images(filename):
+    return send_from_directory('images', filename)
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory('.', 'favicon.ico')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
