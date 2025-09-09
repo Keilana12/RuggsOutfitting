@@ -1,21 +1,23 @@
 # Rugg's Outfitting L.L.C. Website
 
 ## Overview
-This is a Flask web application for Rugg's Outfitting L.L.C., a Montana-based family business offering outfitting services, hunting trips, and ranch experiences. The project was originally built using Google App Engine with Python 2.7 and webapp2, and has been successfully migrated to modern Flask and Python 3.11 for the Replit environment.
+This is a Flask web application for Rugg's Outfitting L.L.C., a Montana-based family business offering outfitting services, hunting trips, and ranch experiences. The project was originally built using Google App Engine with Python 2.7 and webapp2, and has been successfully migrated to modern Flask and Python 3.12 for both Replit and App Engine environments.
 
 ## Recent Changes
 - **September 9, 2025**: Migrated from webapp2 to Flask framework
-- **September 9, 2025**: Updated from Python 2.7 to Python 3.11
-- **September 9, 2025**: Configured for Replit deployment and hosting
+- **September 9, 2025**: Updated from Python 2.7 to Python 3.12
+- **September 9, 2025**: Switched from pyproject.toml to requirements.txt for App Engine compatibility
+- **September 9, 2025**: Configured for Replit deployment and App Engine deployment
 - **September 9, 2025**: Added proper static file serving for assets and images
 - **September 9, 2025**: Set up development workflow and deployment configuration
 
 ## Project Architecture
 ### Technology Stack
-- **Backend**: Flask (Python 3.11)
+- **Backend**: Flask (Python 3.12)
+- **Dependencies**: requirements.txt format for App Engine compatibility
 - **Template Engine**: Native Jinja2 (via Flask's render_template_string)
 - **Static Assets**: CSS, JavaScript, images served through Flask routes
-- **Deployment**: Configured for Replit autoscale deployment
+- **Deployment**: Configured for both Replit autoscale and Google App Engine deployment
 
 ### Directory Structure
 - `main.py` - Main Flask application with all routes

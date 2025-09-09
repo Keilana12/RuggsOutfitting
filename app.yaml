@@ -1,6 +1,4 @@
-runtime: python27
-api_version: 1
-threadsafe: true
+runtime: python312
 
 # [START handlers]
 handlers:
@@ -15,13 +13,9 @@ handlers:
   static_dir: images
   
 - url: /.*
-  script: main.app
+  script: auto
 # [END handlers]
 
-# [START libraries]
-libraries:
-- name: webapp2
-  version: latest
-- name: jinja2
-  version: latest
-# [END libraries]
+# Environment variables
+env_variables:
+  FLASK_ENV: production
